@@ -11,8 +11,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from flask import render_template,request,Flask,jsonify
 app = Flask(__name__)
-es = Elasticsearch(['192.168.68.156'], port=9200, timeout=120)
-res = es.search(index="hiddenwebs", body={"query": {"match_all": {}}, "from": 0, "size": 100})
+es = Elasticsearch(['esip'], port=9200, timeout=120)
+res = es.search(index="databasename", body={"query": {"match_all": {}}, "from": 0, "size": 100})
 #print(res)
 content = []
 for hit in res["hits"]["hits"]:
