@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>AW内容分析系统</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+   {% if message %}
+   <p style="color:red">{{ message }}</p>
+   {% endif %}
+  <div class="login">
+	<h1>AW内容分析系统</h1>
+    <form action="/content_analyze/login" method="post">
+    	<input type="text" name="u" placeholder="Username" required="required" />
+        <input type="password" name="p" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">登录</button>
+    </form>
+
+  </div>
+
+    <script  src="../static/js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
